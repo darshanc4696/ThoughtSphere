@@ -145,7 +145,7 @@ public class BlogsDAOImpl implements BlogsDAO
 		} 
 		catch (Exception e) 
 		{
-			
+			e.printStackTrace();
 		}
 		
 		return status;

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e2b5f; /* Deep purple background */
+    color: #fff; /* White text for readability */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(145deg, #2e2b5f, #1a1840); /* Subtle gradient */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff; /* White text for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a slight shadow for depth */
+}
+
+a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #6f6bb1; /* Lighter purple button */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+}
+
+a:hover {
+    background-color: #473f8c; /* Darker purple on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+a:active {
+    transform: translateY(1px); /* Button press effect */
+}
+
+.container {
+    text-align: center;
+    background-color: #3b365d; /* Slightly darker container background */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Adds depth to the container */
+}
