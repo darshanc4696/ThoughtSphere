@@ -17,7 +17,8 @@ public class UserDAOImpl implements UserDAO
 	private int status;
 	private ResultSet resultSet;
 	private static final String ADD_User = "insert into user(username, email, phoneNumber, password, address) values(?,?,?,?,?)";
-	private static final String Fetch_User = "select * from user where email = ?";
+	private static final String Fetch_User_BYEMAIL = "select * from user where email = ?";
+	private static final String Fetch_User_BYUSERID = "select * from user where userId = ?";
 
 	ArrayList<User> userList = new ArrayList<User>();
 	
@@ -53,8 +54,38 @@ public class UserDAOImpl implements UserDAO
 	{
 		try 
 		{
-			pstmt = connection.prepareStatement(Fetch_User);
+			pstmt = connection.prepareStatement(Fetch_User_BYEMAIL);
 			pstmt.setString(1, email);
+			
+			resultSet = pstmt.executeQuery();
+			
+			while(resultSet.next())
+			{
+				userList.add(new User(resultSet.getString("username"),
+						resultSet.getString("password"),
+						resultSet.getString("email"),
+						resultSet.getString("phoneNumber"),
+						resultSet.getString("address")
+						));
+			}
+			
+		} 
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		return userList.get(0);
+	}
+	
+	@Override
+	public User fetchUser(int userId) 
+	{
+		userList.clear();
+		try 
+		{
+			pstmt = connection.prepareStatement(Fetch_User_BYUSERID);
+			pstmt.setInt(1, userId);
 			
 			resultSet = pstmt.executeQuery();
 			

@@ -6,4 +6,5 @@ public interface UserDAO
 {
 	int addUser(User user);
 	User fetchUser(String email);
+	User fetchUser(int userId);
 }

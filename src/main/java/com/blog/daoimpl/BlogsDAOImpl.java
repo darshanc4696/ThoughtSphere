@@ -80,11 +80,10 @@ public class BlogsDAOImpl implements BlogsDAO
 						resultSet.getInt("userId"),
 						resultSet.getString("title"),
 						resultSet.getString("content"),
-						resultSet.getString("publishedAt")
+						resultSet.getString("publishedAt"),
+						resultSet.getString("imgPath")
 						));
 			}
-			
-			
 		} 
 		catch (Exception e) 
 		{

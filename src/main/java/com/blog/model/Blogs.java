@@ -7,18 +7,28 @@ public class Blogs
 	private String title;
 	private String content;
 	private String publishedAt;
+	private String imgPath;
 	
 	public Blogs() {
 		super();
 	}
 
-	public Blogs(int blogId, int userId, String title, String content, String publishedAt) {
+	public Blogs(int blogId, int userId, String title, String content, String publishedAt, String imgPath) {
 		super();
 		this.blogId = blogId;
 		this.userId = userId;
 		this.title = title;
 		this.content = content;
 		this.publishedAt = publishedAt;
+		this.imgPath = imgPath;
+	}
+
+	public String getImgPath() {
+		return imgPath;
+	}
+
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
 	}
 
 	public Blogs(int userId, String title, String content) {
