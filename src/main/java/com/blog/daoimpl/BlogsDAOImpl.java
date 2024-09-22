@@ -20,6 +20,7 @@ public class BlogsDAOImpl implements BlogsDAO
 	private static final String ADD_BLOG = "insert into blogs(userId, title, content) values(?,?,?)";
 	private static final String FETCH_ALLBLOGS = "select * from blogs";
 	private static final String FETCH_BLOG = "select * from blogs where userId = ?";
+	private static final String FETCH_BLOG_ONID = "select * from blogs where blogId = ?";
 	private static final String UPDATE_BLOG = "update blogs set title=? content=? where blogId = ?";
 	private static final String DELETE_BLOG = "delete from blogs where blogId = ?";
 	
@@ -111,6 +112,27 @@ public class BlogsDAOImpl implements BlogsDAO
 			
 		}
 		return blogsList;
+	}
+	
+	
+	@Override
+	public Blogs fetchSpecificBlogsOnBlogId(int blogId) 
+	{
+		blogsList.clear();
+		try 
+		{
+			pstmt = connection.prepareStatement(FETCH_BLOG_ONID);
+			pstmt.setInt(1, blogId);
+			
+			resultSet = pstmt.executeQuery();
+			blogsList = extractBlogsFromResultSet(resultSet);
+			
+		} 
+		catch (Exception e) 
+		{
+			
+		}
+		return blogsList.get(0);
 	}
 
 	@Override

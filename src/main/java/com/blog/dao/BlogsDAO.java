@@ -11,5 +11,6 @@ public interface BlogsDAO
 	List<Blogs> fetchSpecificBlogs(int userId);
 	int updateSpecificBlog(Blogs blog);
 	int deleteSpeicficBlog(int blogId);
+	Blogs fetchSpecificBlogsOnBlogId(int blogId); 
 
 }

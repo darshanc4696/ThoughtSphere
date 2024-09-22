@@ -28,6 +28,17 @@ public class User
 		this.phoneNumber = phoneNumber;
 		this.address = address;
 	}
+	
+	public User(int userId, String username, String password, String email, String phoneNumber, String address) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+	}
+
 
 	public User() {
 		super();

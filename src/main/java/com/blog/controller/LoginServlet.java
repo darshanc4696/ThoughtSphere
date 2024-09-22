@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet
 			String password = req.getParameter("password");
 			if(user.getPassword().equals(password))
 			{
-				System.out.println("success");
+				System.out.println(user.getUserId());
 				HttpSession session = req.getSession();
 				session.setAttribute("loggedInUser", user);
 				resp.sendRedirect("index.jsp");

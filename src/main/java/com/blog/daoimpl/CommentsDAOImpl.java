@@ -60,10 +60,10 @@ public class CommentsDAOImpl implements CommentsDAO
 			
 			while(resultSet.next())
 			{
-				commentList.add(new Comments(resultSet.getInt("commnetId"),
+				commentList.add(new Comments(resultSet.getInt("commentId"),
 						resultSet.getInt("blogId"),
 						resultSet.getInt("userId"),
-						resultSet.getString("commnetText"),
+						resultSet.getString("commentText"),
 						resultSet.getString("commentedAt")
 						));
 			}
@@ -71,7 +71,7 @@ public class CommentsDAOImpl implements CommentsDAO
 		} 
 		catch (Exception e) 
 		{
-			
+			e.printStackTrace();
 		}
 		return commentList;
 	}

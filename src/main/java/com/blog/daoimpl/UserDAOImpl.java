@@ -61,7 +61,8 @@ public class UserDAOImpl implements UserDAO
 			
 			while(resultSet.next())
 			{
-				userList.add(new User(resultSet.getString("username"),
+				userList.add(new User(resultSet.getInt("userId"),
+						resultSet.getString("username"),
 						resultSet.getString("password"),
 						resultSet.getString("email"),
 						resultSet.getString("phoneNumber"),
