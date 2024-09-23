@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styling */
+.logo a {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Button Container */
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Buttons Styling */
+.nav-buttons .btn {
+    color: #fff;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+/* Hover Effects */
+.nav-buttons .btn:hover {
+    background-color: #1db954;
+    color: #fff;
+}
+
+/* Login/Signup Button Custom Styling */
+.nav-buttons .login-btn {
+    background-color: #1db954;
+}
+
+.nav-buttons .login-btn:hover {
+    background-color: #148a3d;
+}
+
+/* Logout Button */
+.nav-buttons .logout-btn {
+    background-color: #e74c3c;
+}
+
+.nav-buttons .logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}

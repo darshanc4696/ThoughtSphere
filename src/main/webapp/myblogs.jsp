@@ -14,6 +14,7 @@
 <body>
 
 <div class="myblogs-container">
+	<h1> </h1><br>
     <h2 class="page-title">My Blogs</h2>
     <form action="index.jsp">
         <button type="submit" class="back-btn">Back</button>

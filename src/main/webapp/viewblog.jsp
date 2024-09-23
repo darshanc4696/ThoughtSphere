@@ -17,6 +17,9 @@
 <!-- Blog Content Container -->
 <div class="blog-container">
     <!-- Back Button -->
+    <p>  </p><br>
+    <p>  </p><br>
+    <p>  </p><br>
     <button class="back-btn" onclick="window.location.href='index.jsp'">Back</button>
 
     <% 

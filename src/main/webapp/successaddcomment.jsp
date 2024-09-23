@@ -22,7 +22,7 @@
         }
 
         /* Container for message and button */
-        .container {
+        .ccontainer {
             text-align: center;
             padding: 20px;
             border: 1px solid #ccc;
@@ -66,7 +66,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="ccontainer">
     <h1>Successfully Added Comment</h1>
     <form action="viewblog.jsp">
         <button type="submit">Back</button>

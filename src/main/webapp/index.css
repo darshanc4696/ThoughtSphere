@@ -16,11 +16,16 @@ body {
 /* Navbar Styles */
 .navbar {
     background-color: #333;
-    padding: 15px 0;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .logo a {
@@ -28,22 +33,86 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #4CAF50;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #4CAF50;
+}
+
+/* Nav Buttons Styling */
+.nav-buttons {
+    display: flex;
+    gap: 15px; /* Ensure horizontal gap between buttons */
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .nav-buttons a {
-	margin-left: 920px;
     color: #fff;
     padding: 10px 20px;
     background-color: #4CAF50;
     border-radius: 25px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap; /* Prevent the text from breaking into new lines */
 }
 
 .nav-buttons a:hover {
     background-color: #45a049;
 }
+
+.nav-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text inside the button */
+    text-align: center;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-buttons {
+        margin-top: 10px;
+        gap: 10px;
+        justify-content: flex-start;
+        flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+    }
+}
+
+
 
 /* Hero Section */
 .hero {

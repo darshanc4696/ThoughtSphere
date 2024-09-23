@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>   
+    pageEncoding="UTF-8"%>
 <%@ page import="com.blog.model.User" %>
-<%@ include file="navbar.jsp"%>    
+<!-- Include the navbar -->
+<%@ include file="navbar.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,27 +13,32 @@
 </head>
 <body>
 
-<div class="container">
-    <h2>Create Blog: Fill the Details Below</h2>
 
-    <% User user = (User)session.getAttribute("loggedInUser"); 
-    if(user != null) { %>
-        <form action="publishblog" class="blog-form">
-            <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-            </div>
 
-            <div class="form-group">
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" placeholder="Write your opinion/thoughts here..." required></textarea>
-            </div>
+<!-- Wrapper to contain the whole page -->
+<div class="main-wrapper">
+    <div class="ccontainer">
+        <h2>Create Blog: Fill the Details Below</h2>
 
-            <button type="submit" class="submit-btn">Publish</button>
-        </form>
-    <% } else { %>
-        <p class="login-prompt">Please log in to publish the blog.</p>
-    <% } %>
+        <% User user = (User)session.getAttribute("loggedInUser"); 
+        if(user != null) { %>
+            <form action="publishblog" class="blog-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" placeholder="Write your opinion/thoughts here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Publish</button>
+            </form>
+        <% } else { %>
+            <p class="login-prompt">Please log in to publish the blog.</p>
+        <% } %>
+    </div>
 </div>
 
 </body>
